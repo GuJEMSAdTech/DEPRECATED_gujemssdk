@@ -291,6 +291,8 @@ public class GuJEMSNativeAdView extends ImageView implements Receiver,
 	 */
 	public GuJEMSNativeAdView(Context context, int resId, boolean load) {
 		super(context);
+		responseHandler = new AdResponseReceiver(new Handler());
+		responseHandler.setReceiver(this);
 		AttributeSet attrs = inflate(resId);
 		this.preLoadInitialize(context, attrs);
 		this.handleInflatedLayout(attrs);
@@ -331,6 +333,8 @@ public class GuJEMSNativeAdView extends ImageView implements Receiver,
 	public GuJEMSNativeAdView(Context context, Map<String, ?> customParams,
 			int resId, boolean load) {
 		super(context);
+		responseHandler = new AdResponseReceiver(new Handler());
+		responseHandler.setReceiver(this);
 		AttributeSet attrs = inflate(resId);
 		this.preLoadInitialize(context, attrs);
 		this.settings.addCustomParams(customParams);
@@ -381,6 +385,8 @@ public class GuJEMSNativeAdView extends ImageView implements Receiver,
 	public GuJEMSNativeAdView(Context context, Map<String, ?> customParams,
 			String[] kws, String nkws[], int resId, boolean load) {
 		super(context);
+		responseHandler = new AdResponseReceiver(new Handler());
+		responseHandler.setReceiver(this);
 		AttributeSet attrs = inflate(resId);
 		this.preLoadInitialize(context, attrs, kws, nkws);
 		this.settings.addCustomParams(customParams);
@@ -425,6 +431,8 @@ public class GuJEMSNativeAdView extends ImageView implements Receiver,
 	public GuJEMSNativeAdView(Context context, String[] kws, String nkws[],
 			int resId, boolean load) {
 		super(context);
+		responseHandler = new AdResponseReceiver(new Handler());
+		responseHandler.setReceiver(this);
 		AttributeSet attrs = inflate(resId);
 		this.preLoadInitialize(context, attrs, kws, nkws);
 		this.handleInflatedLayout(attrs);
