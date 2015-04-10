@@ -20,7 +20,7 @@ Android SDK change history and downloads
 
 ||*Version*      ||*Loginformation*||
 ||v 1.4.0.1||Bugfix: issue with start interstitial||
-|| ||Bugfix: native ListAdViews without requests||
+|| ||Bugfix: native List-AdViews without requests||
 || ||Minor bugfixes||
 ||v 1.4||Compatibility with Android SDK Tools 23.0.5||
 || ||Compatibility with Android SDK Platform-tools 21.0.0||
