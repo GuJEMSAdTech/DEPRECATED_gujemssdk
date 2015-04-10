@@ -159,6 +159,7 @@ public class GuJEMSNativeAdView extends ImageView implements Receiver,
 									i.putExtra(Browser.SHOW_BACK_EXTRA, true);
 									i.putExtra(Browser.SHOW_FORWARD_EXTRA, true);
 									i.putExtra(Browser.SHOW_REFRESH_EXTRA, true);
+									i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 									getContext().startActivity(i);
 								}
 							}
